@@ -19,7 +19,13 @@
 	margin-top:200px;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"] {
+    width: 100%;
+    float:left;
+    margin-right:10px;
+}
+
+ input[type="number"] {
     width: 100%;
     float:left;
     margin-right:10px;
@@ -31,13 +37,33 @@ input[type="date"] {
 
 .form-group{
 	float:left;
-	margin-right:10px;
+	margin-right:30px;
+}
+
+form-group:nth-child(0){
+	margin-right:20px;
+}
+
+#user-input > div:nth-child(3){
+	margin-right:5px;
+	width:5%;
 }
 
 
+ div.btn-group.bootstrap-select {
+	margin-top:24px;
+	margin-right:10px;
+	
+
+}
+
+.bootstrap-select.btn-group:not(.input-group-btn){
+	float:left;
+}
+
 .selectpicker{
 	float:left;
-	margin-top:25px;
+	
 }
 
 #submit-input{
