@@ -3,6 +3,7 @@
 import MainCtrl from './main/main.controller';
 import SecondPageCtrl from './secondPage/secondPage.controller';
 import LastFMService from './services/lastfm';
+import StateService from './services/stateService';
 
 angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'ngAutocomplete'])
   .factory('LastFMService',LastFMService)
