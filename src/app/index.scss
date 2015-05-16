@@ -27,7 +27,7 @@ p, h1, h2, h3,h4,h5,h6, label{
 	width: 100%; 
 	height: 100%;
 	position: absolute; top: 0; left: 0;
-	background: url("../assets/images/background01.jpg") no-repeat center center fixed;
+	//background: url("../assets/images/background01.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -105,10 +105,16 @@ form-group:nth-child(0){
 
 #submit-input{
 	float:left;
+<<<<<<< HEAD
 	margin-top:36px;
 	height: 45px;
     padding: 12px 20px 0px 20px;
 
+=======
+	margin-top:25px;
+	background-color: #009DE0;
+	border-color: #009DE0;
+>>>>>>> d58fa51266f1a98e506d17ad45c4e6b6e1f9c4a1
 }
 
 
