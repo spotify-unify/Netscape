@@ -5,7 +5,7 @@ var MainCtrl = ["$scope", function($scope) {
   $scope.buttonClicked = function() {
     console.log("hello");
   }
-
+  $('.selectpicker').selectpicker();
 }];
 
 
