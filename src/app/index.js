@@ -17,7 +17,7 @@ angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         controller: 'MainCtrl'
       })
       .state('second-page', {
-        url: '/second-page',
+        url: '/second-page?date',
         templateUrl: 'app/secondPage/secondPage.html',
         controller: 'SecondPageCtrl'
       });
