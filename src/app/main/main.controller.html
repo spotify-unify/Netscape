@@ -1015,16 +1015,15 @@ body .markdown-body
   }
 }
 </style><title>main.controller</title></head><body><article class="markdown-body"><p>&lsquo;use strict&rsquo;;</p>
-<p>class MainCtrl {<br />
-    constructor ($scope) {</p>
-<pre><code>$scope.result1 = '';
-$scope.options1 = null;
-$scope.details1 = '';
-
-
-
-}
+<p>var MainCtrl = [&ldquo;$scope&rdquo;, function($scope) {</p>
+<pre><code>$scope.details = "";
 </code></pre>
-<p>}</p>
+<p>$scope.buttonClicked = function() {<br />
+    console.log($scope.details);<br />
+    console.log(&ldquo;hello&rdquo;);<br />
+    $scope.visible = false;</p>
+<p>}<br />
+  $(&lsquo;.selectpicker&rsquo;).selectpicker();<br />
+}];</p>
 <p>MainCtrl.$inject = [&lsquo;$scope&rsquo;];</p>
 <p>export default MainCtrl;</p></article></body></html>
