@@ -13,6 +13,41 @@
   }
 }
 
+/*first page*/
+
+#user-input{
+	margin-top:200px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    float:left;
+    margin-right:10px;
+}
+input[type="date"] {
+	width:100%;
+	
+}
+
+.form-group{
+	float:left;
+	margin-right:10px;
+}
+
+
+.selectpicker{
+	float:left;
+	margin-top:25px;
+}
+
+#submit-input{
+	float:left;
+	margin-top:25px;
+}
+
+
+
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
