@@ -23,13 +23,7 @@ label{
 	color: white;
 }
 
-#user-input > div:nth-child(1) > label{
-	color: white;
 
-   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
-}
 
 #user-input > div> label{
 	font-size:22px;
