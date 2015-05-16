@@ -1,10 +1,12 @@
 'use strict';
 
-class MainCtrl {
-    constructor ($scope) {
-    	
-    }
-}
+var MainCtrl = ["$scope", function($scope) {
+
+  $scope.buttonClicked = function() {
+    console.log("hello");
+  }
+
+}];
 
 
 MainCtrl.$inject = ['$scope'];
