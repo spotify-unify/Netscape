@@ -62,13 +62,16 @@ class SecondPageCtrl {
             }
 
             $scope.backupConcerts = $scope.concerts;
+            
           });
 
-        var playlist_songs = [];
+        function updateConcerts(startDate,finishDate) {
 
-        // undefined? concerts?
-        console.log($scope.backupConcerts);
-        /*$scope.concerts.artists.headliner.forEach( function (artist) {
+        }
+
+        /*function generatePlaylist() {
+          var playlist_songs = [];
+          $scope.concerts.artists.headliner.forEach( function (artist) {
             $Spotify.search(artist, 'artist').then(function (data) {
                 //var artist_id = data["artists"]["items"][0]["id"];
                 var artist_id = data.artists.items[0].id;
@@ -76,18 +79,17 @@ class SecondPageCtrl {
                 var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
                     var top_five_tracks = data.tracks.slice(0,5);
                     
-                    top_five_tracks.forEach(function (track) {
-                        playlist_songs.push(track.name);
-                    });
+                  top_five_tracks.forEach(function (track) {
+                    playlist_songs.push(track.name);
+                  });
                 }); 
             });
-        });*/
+          });
 
-        console.log(playlist_songs);
+          console.log(playlist_songs);
 
-        function updateConcerts(startDate,finishDate) {
-
-        }
+          return playlist_songs;
+        }*/
     }
 }
 
