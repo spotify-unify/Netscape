@@ -180,7 +180,7 @@ class SecondPageCtrl {
                     var artist_id = data.artists.items[0].id;
 
                     var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
-                        var top_five_tracks = data.tracks.slice(0,5);
+                        var top_five_tracks = data.tracks.slice(0,1);
 
                         top_five_tracks.forEach(function (track) {
                             playlist_songs.push(track.id);
