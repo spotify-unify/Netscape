@@ -43,10 +43,6 @@ class SecondPageCtrl {
           });
         d3.select("#timeline-chart")
             .data([]);
-
-        $Spotify.search('Kygo', 'artist').then(function (data) {
-            console.log(data);
-        });
     }
 
     filterConcert(concertArray){
