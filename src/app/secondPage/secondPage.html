@@ -8,12 +8,13 @@
 			<img id="logo" src="./assets/images/venew.png">
 		</div>
     
-<div ng-if="concerts.length != 0">
-		<rickshaw
-		rickshaw-options="options"
-		rickshaw-series="series">
-		</rickshaw>
-
+<div>
+        <rickshaw
+          rickshaw-options="options"
+          rickshaw-series="series">
+        </rickshaw>
+        <div id="fake-graph" class="hidden"></div>
+        <div id="range-slider"></div>
 		<ul class="list-inline">
 			<li ng-repeat="concert in concerts">
 				<div id="concertimage">
