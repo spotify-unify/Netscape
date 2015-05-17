@@ -8,6 +8,8 @@ class SecondPageCtrl {
 
         d3.select("#timeline-chart")
             .data([]);
+
+        $Spotify.login();
     }
 
     filterConcert(concertArray){
