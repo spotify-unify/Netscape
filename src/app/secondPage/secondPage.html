@@ -7,10 +7,7 @@
 		<div class="row logo">
 			<img id="logo" src="./assets/images/venew.png">
 		</div>
-
-    <div ng-if="concerts.length == 0">
-      <h1>No shows around those days in <strong>{{location}}</strong></h1>
-      </div>
+    
 <div ng-if="concerts.length != 0">
 		<rickshaw
 		rickshaw-options="options"
@@ -34,11 +31,11 @@
 					<div id="concertartist">
 						<h2 class="concertlist" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">{{concert.artists.headliner}}</h2>
 					</div>
-					
+
 					<div id="concertplace" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">
 						<p class="concertlist">{{concert.venue.name}}, </p>
 						<p class="concertlist">{{concert.venue.location.city}}</p>
-					</div>					
+					</div>
 				</div>
 
 			</li>
@@ -48,7 +45,7 @@
 	<div id="timeline-chart">
 	</div>
 
-				
+
 </div>
 
 	</div>
