@@ -1,60 +1,61 @@
 
 <div id="second-page">
-	<div class="container" >
 
-		<div class="row logo">
-			<img id="logo" src="./assets/images/venew.png">
-      <div id="spotify-playlist">
-        <img ng-src="./assets/images/spotify-playlist.png" ng-click="generatePlaylist()">
-      </div>
-		</div>
+  <div class="container" >
+	<div id="spotify-playlist">
+	  <img ng-src="./assets/images/spotify-playlist.png" ng-click="generatePlaylist()">
+	</div>
+	<div class="row logo">
+	  <img id="logo" src="./assets/images/venew.png">
+	</div>
 
-<div ng-if="concerts.length != 0">
-		<rickshaw
-		rickshaw-options="options"
-		rickshaw-series="series">
-		</rickshaw>
+    <div>
+      <rickshaw
+        rickshaw-options="options"
+        rickshaw-series="series">
+      </rickshaw>
+      <div id="fake-graph" class="hidden"></div>
+      <div id="range-slider"></div>
+	  <ul class="list-inline">
+		<li ng-repeat="concert in concerts">
+		  <div id="concertimage">
+			<img id="concertlistimage" src="{{concert.image[3]['#text']}}">
+		  </div>
+		  <div id="concertdate">
+			<p class="concertlist" id="concertDay" >{{concert.day}}</p>
 
-		<ul class="list-inline">
-			<li ng-repeat="concert in concerts">
-				<div id="concertimage">
-					<img id="concertlistimage" src="{{concert.image[3]['#text']}}">
-				</div>
-				<div id="concertdate">
-					<p class="concertlist" id="concertDay" >{{concert.day}}</p>
-
-            		<p class="concertMonthAndTime">{{concert.month}}</p>
-            		<p class="concertMonthAndTime">{{concert.timeHours}}:{{concert.timeMinutes}}</p>
-				</div>
+            <p class="concertMonthAndTime">{{concert.month}}</p>
+            <p class="concertMonthAndTime">{{concert.timeHours}}:{{concert.timeMinutes}}</p>
+		  </div>
 
 
-				<div id="concertdetail">
-					<div id="concertartist">
-						<h2 class="concertlist" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">{{concert.artists.headliner}}</h2>
-					</div>
+		  <div id="concertdetail">
+			<div id="concertartist">
+			  <h2 class="concertlist" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">{{concert.artists.headliner}}</h2>
+			</div>
 
-					<div id="concertplace" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">
-						<p class="concertlist">{{concert.venue.name}}, </p>
-						<p class="concertlist">{{concert.venue.location.city}}</p>
-					</div>
-				</div>
+			<div id="concertplace" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">
+			  <p class="concertlist">{{concert.venue.name}}, </p>
+			  <p class="concertlist">{{concert.venue.location.city}}</p>
+			</div>
+		  </div>
 
-			</li>
-		</ul>
+		</li>
+	  </ul>
 
 	</div>
 	<div id="timeline-chart">
 	</div>
 
 
-</div>
-
-	</div>
+  </div>
 
 </div>
 
-			{{date}}
-			{{city}}
-			{{locationLat}}
-			{{locationLong}}
-			{{duration}}
+</div>
+
+{{date}}
+{{city}}
+{{locationLat}}
+{{locationLong}}
+{{duration}}
