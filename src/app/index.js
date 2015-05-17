@@ -6,7 +6,7 @@ import LastFMService from './services/lastfm';
 import StateService from './services/stateService';
 import d3Service from './services/d3Service';
 
-angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'ngAutocomplete'])
+angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'ngAutocomplete', 'angular-rickshaw'])
   .factory('d3',d3Service)
   .factory('LastFMService',LastFMService)
   .controller('MainCtrl', MainCtrl)

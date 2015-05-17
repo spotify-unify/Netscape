@@ -20,6 +20,29 @@ class SecondPageCtrl {
         else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
 
+        function filterConcerts(concerts){
+            var _ = window._
+            var groups = _.groupBy(concerts, function(concert){
+                return new Date((new Date(concert.startDate)).toDateString());
+            });
+            var newGroups = []
+            for(var date in groups){
+                console.log((new Date(date)).getDate())
+                newGroups.push({
+                    x: (new Date(date)).getTime(),
+                    y: groups[date].length
+                });
+            }
+            return newGroups
+        }
+        $scope.series = [{
+            name:"Series",
+            data:[]
+        }]
+        $scope.options = {
+            renderer: 'bar'
+        };
+
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
 
@@ -59,8 +82,12 @@ class SecondPageCtrl {
                 $scope.concerts.push(tmp[i]);
               }
             }
+              $scope.series = [{
+                  name: "Series",
+                  data: filterConcerts($scope.concerts)
+              }]
 
-            $scope.backupConcerts = $scope.concerts;
+              $scope.backupConcerts = $scope.concerts;
 
             getSongs();
           });
@@ -103,16 +130,15 @@ class SecondPageCtrl {
                 var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
                     var top_five_tracks = data.tracks.slice(0,5);
 
-                    top_five_tracks.forEach(function (track) {
-                        playlist_songs.push(track.name);
-                    });
+                  top_five_tracks.forEach(function (track) {
+                    playlist_songs.push(track.name);
+                  });
                 });
             });
         }
         }
 
         console.log(playlist_songs);
-
     }
 }
 
@@ -120,3 +146,5 @@ SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3','LastFMServic
 
 
 export default SecondPageCtrl;
+
+
