@@ -3,6 +3,7 @@
 class SecondPageCtrl {
     constructor ($scope, $state, $stateParams, d3, LastFMService, $Spotify) {
 
+
         var holidayDate = new Date($stateParams.date),
             holidayLocation = $stateParams.location,
             holidayDuration = $stateParams.duration,
