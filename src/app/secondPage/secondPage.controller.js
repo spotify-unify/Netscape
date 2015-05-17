@@ -9,6 +9,7 @@ class SecondPageCtrl {
             dwm = $stateParams.dwm,
             endDate = new Date($stateParams.date);
 
+        $scope.backupConcerts = [];
         $scope.concerts = [];
 
         if(dwm === "days") {
@@ -61,7 +62,13 @@ class SecondPageCtrl {
 
               }
             }
+
+            $scope.backupConcerts = $scope.concerts;
           });
+
+        function updateConcerts(startDate,finishDate) {
+
+        }
 
         $Spotify.search('Nirvana', 'artist').then(function (data) {
             //var artist_id = data["artists"]["items"][0]["id"];
