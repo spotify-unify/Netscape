@@ -165,12 +165,12 @@ div.btn-group.bootstrap-select {
 
 #second-page{
 	width: 100%; 
-	height: 100%;
 	background-color: #c3c3c3;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	padding-bottom: 40px;
 }
 
 .concertlist {
@@ -194,6 +194,8 @@ ul {
 	vertical-align: top;
 
 }
+
+/*---------------------------------*/
 #concertdate {
 	height: 102px;
 	width: 12%;
@@ -202,11 +204,31 @@ ul {
 	background-color: white;
 	vertical-align: top;
 	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
 
 }
+
 #concertdate p {
 }
 
+#concertDay {
+	font-size: 40px;
+	vertical-align:middle
+
+}
+
+.concertMonthAndTime {
+	/*display:table-cell;*/
+	overflow: auto;
+	vertical-align:middle;
+	font-size: 16px;
+	margin-bottom: 0px;
+
+}
+
+/*style="display:table-cell;vertical-align:middle;height:102px;"*/
+/*------------------------------------*/
 #concertdetail {
 	height: 102px;
 	width: 60%;
