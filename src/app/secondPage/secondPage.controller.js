@@ -125,7 +125,7 @@ class SecondPageCtrl {
                 $scope.backupConcerts = $scope.concerts;
                 grapher();
 
-                //getSongs();
+                getSongs();
             });
 
         var updateConcerts = function(startDate,finishDate) {
