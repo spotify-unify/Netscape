@@ -118,6 +118,9 @@ class SecondPageCtrl {
         // undefined? concerts?
 
         function getSongs() {
+
+        $Spotify.login();
+
         console.log($scope.concerts);
         $scope.concerts
         for(var i = 0; i < $scope.concerts.length; i++){
@@ -131,7 +134,7 @@ class SecondPageCtrl {
                     var top_five_tracks = data.tracks.slice(0,5);
 
                   top_five_tracks.forEach(function (track) {
-                    playlist_songs.push(track.name);
+                    playlist_songs.push(track.id);
                   });
                 });
             });
