@@ -110,7 +110,7 @@ form-group:nth-child(0){
 
 #user-input > div:nth-child(4) > div > button > span.filter-option.pull-left{
 	height:31px;
-	padding-top:5px;
+	padding-top:3px;
 }
 
  div.btn-group.bootstrap-select {
@@ -118,6 +118,8 @@ form-group:nth-child(0){
 	margin-right:10px;
 	font-family: 'Raleway', sans-serif;
 	color:rgb(85,85,85);
+	font-size: large;
+	
 
 	
 
@@ -128,6 +130,13 @@ form-group:nth-child(0){
 
 .bootstrap-select.btn-group:not(.input-group-btn){
 	float:left;
+
+}
+
+#user-input > div:nth-child(4) > div > button > span.filter-option.pull-left{
+	font-family: 'Raleway', sans-serif;
+	color:rgb(85,85,85);
+	font-size: large;
 }
 
 .selectpicker{
@@ -135,13 +144,16 @@ form-group:nth-child(0){
 	
 }
 
-#submit-input{
-	float:left;
-	margin-top:36px;
-	height: 45px;
-	padding: 12px 20px 0px 20px;
-	background-color: #009DE0;
-	border-color: #009DE0;
+#submit{
+	 	float:left;
+ 	margin-top:36px;
+ 	height: 45px;
+   padding: 2px 40px 0px 40px;
+ 	background-color: #009DE0;
+ 	border-color: #009DE0;
+	font-family: 'Raleway', sans-serif;
+	font-size:	large;
+
 }
 
 
