@@ -1,5 +1,5 @@
 
-<div id="second-page" >
+<div id="second-page">
 	<div class="container" >
 		<div class="row logo">
 			<img id="logo" src="./assets/images/venew.png">
@@ -42,3 +42,30 @@
 			{{locationLat}}
 			{{locationLong}}
 			{{duration}}
+
+
+			<script>
+
+(function ($) {
+  'use strict';
+
+  var content  = $('#second-page').smoothState({
+
+        // onStart runs as soon as link has been activated
+        onStart : {
+          
+          // Set the duration of our animation
+          duration: 250,
+          
+          // Alterations to the page
+          render: function () {
+
+            // Quickly toggles a class and restarts css animations
+            content.toggleAnimationClass('is-exiting');
+          }
+        }
+      }).data('smoothState'); // makes public methods available
+})(jQuery);
+
+</script>
+
