@@ -8,6 +8,10 @@
 			<img id="logo" src="./assets/images/venew.png">
 		</div>
 
+    <div ng-if="concerts.length == 0">
+      <h1>No shows around those days in <strong>{{location}}</strong></h1>
+      </div>
+<div ng-if="concerts.length != 0">
 		<rickshaw
 		rickshaw-options="options"
 		rickshaw-series="series">
@@ -42,7 +46,7 @@
 
 	</div>
 
-
+</div>
 
 
 	{{date}}
