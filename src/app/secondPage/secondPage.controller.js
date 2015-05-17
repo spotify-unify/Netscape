@@ -9,6 +9,7 @@ class SecondPageCtrl {
             dwm = $stateParams.dwm,
             endDate = new Date($stateParams.date);
 
+        $scope.location = holidayLocation;
         $scope.backupConcerts = [];
         $scope.concerts = [];
 
