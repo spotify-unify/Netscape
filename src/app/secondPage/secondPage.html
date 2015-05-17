@@ -1,10 +1,12 @@
 
 <div id="second-page" >
 	<div class="container" >
+	<div id="spotify-playlist">
+			<img ng-src="./assets/images/spotify-playlist.png" ng-click="generatePlaylist()">
+		</div>
 		<div class="row logo">
 			<img id="logo" src="./assets/images/venew.png">
 		</div>
-
 
 		<ul class="list-inline">
 			<li ng-repeat="concert in concerts">
@@ -33,9 +35,7 @@
 				<div id="timeline-chart">
 				</div>
 
-				<!--<div id="spotify-playlist">
-					<img ng-src="./assets/images/spotify-playlist.png" ng-click="generatePlaylist()">
-				</div>-->
+				
 			</div>
 
 

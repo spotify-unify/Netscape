@@ -81,7 +81,7 @@ class SecondPageCtrl {
           }
       }
 
-        /*function generatePlaylist() {
+        function generatePlaylist() {
           var playlist_songs = [];
           $scope.concerts.artists.headliner.forEach( function (artist) {
             $Spotify.search(artist, 'artist').then(function (data) {
@@ -101,7 +101,7 @@ class SecondPageCtrl {
           console.log(playlist_songs);
 
           return playlist_songs;
-        }*/
+        }
     }
 }
 
