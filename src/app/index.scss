@@ -15,7 +15,7 @@
 
 /*first page*/
 
-p, h1, h2, h3,h4,h5,h6, label{
+p, h1, h2, h3,h4,h5,h6, label, -webkit-input-placeholder, -moz-placeholder,input {
 	font-family: 'Raleway', sans-serif;
 
 }
@@ -55,16 +55,20 @@ input[type="text"] {
     float:left;
     margin-right:10px;
     height: 45px;
+    font-size:18px;
 
 }
 
-
+input.form-control{
+	font-size:18px;
+}
 
  input[type="number"] {
     width: 100%;
     float:left;
     margin-right:10px;
     height: 45px;
+    font-size:18px;
 }
 input[type="date"] {
 	width:100%;
@@ -81,18 +85,28 @@ form-group:nth-child(0){
 	margin-right:20px;
 }
 
+/*Date*/
+#user-input > div:nth-child(2){
+	width:20%;
+}
 #user-input > div:nth-child(3){
 	margin-right:5px;
 	width:6%;
 }
 
+
+
 #user-input > div:nth-child(4) > div > button > span.filter-option.pull-left{
 	height:31px;
 	padding-top:5px;
 }
+
  div.btn-group.bootstrap-select {
 	margin-top:36px;
 	margin-right:10px;
+	font-family: 'Raleway', sans-serif;
+	color:rgb(85,85,85);
+
 	
 
 }
@@ -100,24 +114,44 @@ form-group:nth-child(0){
 	margin-right:10px;
 }
 
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+	width:100%;
+}
+
 .bootstrap-select.btn-group:not(.input-group-btn){
 	float:left;
+	
 }
+
 
 .selectpicker{
 	float:left;
 	
 }
 
-#submit-input{
+/*selectpicker dropdown*/
+#user-input > div:nth-child(4) > div > button{
+	font-size:18px;
+	color: #555;
+}
+
+#submit{
 	float:left;
 	margin-top:36px;
 	height: 45px;
-    padding: 12px 20px 0px 20px;
+    padding: 2px 40px 0px 40px;
 	background-color: #009DE0;
 	border-color: #009DE0;
+	font-family: 'Raleway', sans-serif;
+	font-size:	large;
+
 }
 
+/* Second Page */
+
+#playlist {
+	width:200px;
+}
 
 
 
