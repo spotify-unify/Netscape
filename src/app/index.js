@@ -12,7 +12,6 @@ angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'n
   .controller('MainCtrl', MainCtrl)
   .controller('SecondPageCtrl', SecondPageCtrl)
   .config(function (SpotifyProvider) {
-    console.log("Spotify")
     SpotifyProvider.setClientId('70a0a5a24d3d48c4869c40e118968036');
     SpotifyProvider.setRedirectUri('localhost:3032');
     SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');

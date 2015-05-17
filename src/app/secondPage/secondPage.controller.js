@@ -1,7 +1,7 @@
 'use strict';
 
 class SecondPageCtrl {
-    constructor ($scope, $state, $stateParams, Spotify) {
+    constructor ($scope, $state, $stateParams, $d3, $Spotify) {
         console.log("From first page: ", $stateParams);
         $scope.date = $stateParams.date;
         $scope.details = $stateParams.details;
@@ -9,7 +9,7 @@ class SecondPageCtrl {
         d3.select("#timeline-chart")
             .data([]);
 
-        Spotify.search('Nirvana', 'artist').then(function (data) {
+        $Spotify.search('Kygo', 'artist').then(function (data) {
             console.log(data);
         });
     }
