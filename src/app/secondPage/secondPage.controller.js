@@ -172,7 +172,8 @@ class SecondPageCtrl {
 
           $Spotify.getCurrentUser().then(function (user_id) {
             console.log("User id: ", user_id);
-            $Spotify.createPlaylist(user_id.id, { name: 'Unify - Venew' }).then(function (playlist) {
+
+            $Spotify.createPlaylist(user_id.id, { name: 'Unify - Venew - ' + $scope.location }).then(function (playlist) {
               console.log("Playlist id: ", playlist);
               console.log(playlist_songs);
               $Spotify.addPlaylistTracks(user_id.id, playlist.id, playlist_songs.slice(0,50));
