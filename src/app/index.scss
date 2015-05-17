@@ -31,9 +31,6 @@ label{
 #info-text > h2{
 	padding-left:15px;
 	color: white;
-	
-
-
 }
 
 #user-input > div> label{
@@ -168,39 +165,39 @@ div.btn-group.bootstrap-select {
 /* leaving animations ----------------------------------------- */
 /* rotate and fall */
 @keyframes rotateFall {
-    0%      { transform: rotateZ(0deg); }
-    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
-    40%     { transform: rotateZ(17deg); }
-    60%     { transform: rotateZ(16deg); }
-    100%    { transform: translateY(100%) rotateZ(17deg); }
+	0%      { transform: rotateZ(0deg); }
+	20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40%     { transform: rotateZ(17deg); }
+	60%     { transform: rotateZ(16deg); }
+	100%    { transform: translateY(100%) rotateZ(17deg); }
 }
 
 /* slide in from the bottom */
 @keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
+	to      { transform: translateX(-100%); }
 }
 
 /* rotate out newspaper */
 @keyframes rotateOutNewspaper {
-    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+	to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
 
 /* entering animations --------------------------------------- */
 /* scale up */
 @keyframes scaleUp {
-    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+	from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
 /* slide in from the right */
 @keyframes slideInRight {
-    from    { transform:translateX(100%); }
-    to      { transform: translateX(0); }
+	from    { transform:translateX(100%); }
+	to      { transform: translateX(0); }
 }
 
 /* slide in from the bottom */
 @keyframes slideInUp {
-    from    { transform:translateY(100%); }
-    to      { transform: translateY(0); }
+	from    { transform:translateY(100%); }
+	to      { transform: translateY(0); }
 }
 
 .ng-enter           { animation: scaleUp 0.5s both ease-in;  }
@@ -209,7 +206,7 @@ div.btn-group.bootstrap-select {
 
 
 
-/*start here*/
+/*second page start here*/
 
 #second-page{
 	width: 100%; 
@@ -228,11 +225,14 @@ div.btn-group.bootstrap-select {
 
 ul {
 	width: 100%;
+	background-color: white;
 }
 .list-inline {
-	margin-top: 10%; 
-	margin-bottom: 10%;
+	margin-top: 5%; 
+	margin-bottom: 5%;
 	width: 100%;
+	background-color: white;
+	padding: 2%;
 }
 
 #concertimage {
@@ -240,10 +240,8 @@ ul {
 	display: inline-block;
 	background-color: white;
 	vertical-align: top;
-
 }
 
-/*---------------------------------*/
 #concertdate {
 	height: 102px;
 	width: 12%;
@@ -272,11 +270,8 @@ ul {
 	vertical-align:middle;
 	font-size: 16px;
 	margin-bottom: 0px;
-
 }
 
-/*style="display:table-cell;vertical-align:middle;height:102px;"*/
-/*------------------------------------*/
 #concertdetail {
 	height: 102px;
 	width: 60%;
