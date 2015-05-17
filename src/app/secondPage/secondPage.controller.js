@@ -24,6 +24,20 @@ class SecondPageCtrl {
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
 
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+
             var tmp = data.events.event,
                 i, concertDate;
 
@@ -32,14 +46,14 @@ class SecondPageCtrl {
               concertDate = new Date(tmp[i].startDate);
 
               if(concertDate >= holidayDate && concertDate <= endDate) {
+                tmp[i].day = concertDate.getDate();
+                tmp[i].month = month[concertDate.getMonth()];
+                tmp[i].timeHours = addZero(concertDate.getHours());
+                tmp[i].timeMinutes = addZero(concertDate.getMinutes());
                 $scope.concerts.push(tmp[i]);
 
               }
-
-
             }
-
-
           });
 
         $Spotify.search('Nirvana', 'artist').then(function (data) {
@@ -48,7 +62,7 @@ class SecondPageCtrl {
 
             console.log($Spotify.getArtistTopTracks(artist_id, 'SE'));
         });
-        
+
     }
 }
 
