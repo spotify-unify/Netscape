@@ -9,6 +9,7 @@ class SecondPageCtrl {
             dwm = $stateParams.dwm,
             endDate = new Date($stateParams.date);
 
+        $scope.location = holidayLocation;
         $scope.backupConcerts = [];
         $scope.concerts = [];
 
@@ -19,6 +20,29 @@ class SecondPageCtrl {
           endDate.setDate(endDate.getDate() + holidayDuration*7);
         else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
+
+        function filterConcerts(concerts){
+            var _ = window._
+            var groups = _.groupBy(concerts, function(concert){
+                return new Date((new Date(concert.startDate)).toDateString());
+            });
+            var newGroups = []
+            for(var date in groups){
+                console.log((new Date(date)).getDate())
+                newGroups.push({
+                    x: (new Date(date)).getTime(),
+                    y: groups[date].length
+                });
+            }
+            return newGroups
+        }
+        $scope.series = [{
+            name:"Series",
+            data:[]
+        }]
+        $scope.options = {
+            renderer: 'bar'
+        };
 
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
@@ -57,37 +81,65 @@ class SecondPageCtrl {
                 tmp[i].timeHours = addZero(concertDate.getHours());
                 tmp[i].timeMinutes = addZero(concertDate.getMinutes());
                 $scope.concerts.push(tmp[i]);
-
               }
             }
+              $scope.series = [{
+                  name: "Series",
+                  data: filterConcerts($scope.concerts)
+              }]
 
-            $scope.backupConcerts = $scope.concerts;
+              $scope.backupConcerts = $scope.concerts;
+
+            getSongs();
           });
 
-        var playlist_songs = [];
+      var updateConcerts = function(startDate,finishDate) {
 
+          var i,concertDate;
+
+          $scope.concerts = [];
+
+          for(i=0;i<$scope.backupConcerts.length;i++) {
+
+            concertDate = new Date($scope.backupConcerts[i].startDate);
+
+            if(concertDate >= startDate && concertDate <= finishDate) {
+              $scope.concerts.push($scope.backupConcerts[i]);
+            }
+          }
+      }
+
+        function testsongs(){
+            console.log($scope.backupConcerts);
+            console.log($scope.artists.headliner);
+        }
+
+
+        var playlist_songs = [];
         // undefined? concerts?
-        console.log($scope.backupConcerts);
-        /*$scope.concerts.artists.headliner.forEach( function (artist) {
+
+        function getSongs() {
+        console.log($scope.concerts);
+        $scope.concerts
+        for(var i = 0; i < $scope.concerts.length; i++){
+            var artist = $scope.concerts[i].artists.headliner;
+            console.log(artist);
             $Spotify.search(artist, 'artist').then(function (data) {
                 //var artist_id = data["artists"]["items"][0]["id"];
                 var artist_id = data.artists.items[0].id;
 
                 var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
                     var top_five_tracks = data.tracks.slice(0,5);
-                    
-                    top_five_tracks.forEach(function (track) {
-                        playlist_songs.push(track.name);
-                    });
-                }); 
+
+                  top_five_tracks.forEach(function (track) {
+                    playlist_songs.push(track.name);
+                  });
+                });
             });
-        });*/
+        }
+        }
 
         console.log(playlist_songs);
-
-        function updateConcerts(startDate,finishDate) {
-
-        }
     }
 }
 
@@ -95,3 +147,5 @@ SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3','LastFMServic
 
 
 export default SecondPageCtrl;
+
+
