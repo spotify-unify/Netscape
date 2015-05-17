@@ -20,8 +20,6 @@ class SecondPageCtrl {
         else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
 
-
-
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
 
@@ -83,13 +81,31 @@ class SecondPageCtrl {
           }
       }
 
-        $Spotify.search('Nirvana', 'artist').then(function (data) {
-            //var artist_id = data["artists"]["items"][0]["id"];
-            var artist_id = data.artists.items[0].id;
+        var playlist_songs = [];
 
-            console.log($Spotify.getArtistTopTracks(artist_id, 'SE'));
-        });
+        // undefined? concerts?
+        console.log($scope.backupConcerts);
+        /*$scope.concerts.artists.headliner.forEach( function (artist) {
+            $Spotify.search(artist, 'artist').then(function (data) {
+                //var artist_id = data["artists"]["items"][0]["id"];
+                var artist_id = data.artists.items[0].id;
+>>>>>>> 46eaf3f08c63918af8aa546664a3dbef998b5ede
 
+                var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
+                    var top_five_tracks = data.tracks.slice(0,5);
+
+                    top_five_tracks.forEach(function (track) {
+                        playlist_songs.push(track.name);
+                    });
+                });
+            });
+        });*/
+
+        console.log(playlist_songs);
+
+        function updateConcerts(startDate,finishDate) {
+
+        }
     }
 }
 
