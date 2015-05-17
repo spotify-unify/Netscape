@@ -44,7 +44,13 @@ class SecondPageCtrl {
         d3.select("#timeline-chart")
             .data([]);
 
-        $Spotify.login();
+        $Spotify.search('Nirvana', 'artist').then(function (data) {
+            //var artist_id = data["artists"]["items"][0]["id"];
+            var artist_id = data.artists.items[0].id;
+
+            console.log($Spotify.getArtistTopTracks(artist_id, 'SE'));
+        });
+        
     }
 
     filterConcert(concertArray){
