@@ -1,7 +1,7 @@
 'use strict';
 
 class SecondPageCtrl {
-    constructor ($scope, $state, $stateParams, d3, LastFMService) {
+    constructor ($scope, $state, $stateParams, d3, LastFMService, $Spotify) {
 
         var holidayDate = new Date($stateParams.date),
             holidayLocation = $stateParams.location,
@@ -43,6 +43,10 @@ class SecondPageCtrl {
           });
         d3.select("#timeline-chart")
             .data([]);
+
+        $Spotify.search('Kygo', 'artist').then(function (data) {
+            console.log(data);
+        });
     }
 
     filterConcert(concertArray){
@@ -247,6 +251,7 @@ class SecondPageCtrl {
     }
 }
 
-SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3', 'LastFMService'];
+SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3','LastFMService', 'Spotify'];
+
 
 export default SecondPageCtrl;
