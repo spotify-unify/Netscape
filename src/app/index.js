@@ -4,8 +4,10 @@ import MainCtrl from './main/main.controller';
 import SecondPageCtrl from './secondPage/secondPage.controller';
 import LastFMService from './services/lastfm';
 import StateService from './services/stateService';
+import d3Service from './services/d3Service';
 
 angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'ngAutocomplete'])
+  .factory('d3',d3Service)
   .factory('LastFMService',LastFMService)
   .controller('MainCtrl', MainCtrl)
   .controller('SecondPageCtrl', SecondPageCtrl)
