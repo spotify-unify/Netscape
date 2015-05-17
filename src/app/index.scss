@@ -104,6 +104,8 @@ form-group:nth-child(0){
  div.btn-group.bootstrap-select {
 	margin-top:36px;
 	margin-right:10px;
+	font-family: 'Raleway', sans-serif;
+	color:rgb(85,85,85);
 
 	
 
@@ -121,13 +123,16 @@ form-group:nth-child(0){
 	
 }
 
+
 .selectpicker{
 	float:left;
 	
 }
 
+/*selectpicker dropdown*/
 #user-input > div:nth-child(4) > div > button{
 	font-size:18px;
+	color: #555;
 }
 
 #submit{
@@ -139,6 +144,7 @@ form-group:nth-child(0){
 	border-color: #009DE0;
 	font-family: 'Raleway', sans-serif;
 	font-size:	large;
+
 }
 
 /* Second Page */
