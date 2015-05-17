@@ -91,10 +91,15 @@ input[type="date"] {
 .form-group{
 	float:left;
 	margin-right:30px;
+
 }
 
 form-group:nth-child(0){
 	margin-right:20px;
+	
+}
+#user-input > div:nth-child(1){
+	width:30%;
 }
 
 /*Date*/
