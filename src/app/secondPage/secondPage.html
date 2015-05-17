@@ -3,12 +3,15 @@
 			<div class="row logo">
 				<img id="logo" src="./assets/images/venew.png">
 			</div>
-
-			{{date}}
-			{{city}}
-			{{locationLat}}
-			{{locationLong}}
-			{{duration}}
+      <ul>
+        <li ng-repeat="concert in concerts">
+          <h2>{{concert.artists.headliner}}</h2>
+          <p>{{concert.venue.name}}</p>
+          <p>{{concert.venue.location.city}}</p>
+          <p>{{concert.startDate}}</p>
+          <img src="{{concert.image[3]['#text']}}">
+        </li>
+      </ul>
 		</div>
 		<div id="timeline-chart">
 		</div>
