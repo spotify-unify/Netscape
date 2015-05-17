@@ -36,7 +36,14 @@ class SecondPageCtrl {
             month[8] = "September";
             month[9] = "October";
             month[10] = "November";
-            month[11] = "December";
+            month[11] = "December"
+
+            function addZero(i) {
+              if (i < 10) {
+                i = "0" + i;
+              }
+              return i;
+            }
 
             var tmp = data.events.event,
                 i, concertDate;
