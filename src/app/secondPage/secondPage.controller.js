@@ -91,8 +91,11 @@ class SecondPageCtrl {
 
               $scope.backupConcerts = $scope.concerts;
 
-            getSongs();
           });
+
+      $scope.generatePlaylist = function() {
+        getSongs();
+      }
 
       var updateConcerts = function(startDate,finishDate) {
 
@@ -157,9 +160,6 @@ class SecondPageCtrl {
     }
 
 
-    $scope.generatePlaylist = function() {
-      getSongs();
-    }
 }
 
 SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3','LastFMService', 'Spotify'];
