@@ -145,6 +145,11 @@ class SecondPageCtrl {
 
         console.log(playlist_songs);
     }
+
+
+    $scope.generatePlaylist = function() {
+      getSongs();
+    }
 }
 
 SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3','LastFMService', 'Spotify'];

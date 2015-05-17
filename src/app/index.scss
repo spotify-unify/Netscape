@@ -212,6 +212,24 @@ rect {
   fill: #009DE0;
 }
 
+.logo {
+  display: inline;
+}
+
+.logo #logo {
+  float: left;
+}
+
+#spotify-playlist {
+  margin-top: 40px;
+  float: right;
+
+}
+
+#spotify-playlist img {
+  width: 200px;
+  height: auto;
+}
 #second-page{
 
 	width: 100%;
