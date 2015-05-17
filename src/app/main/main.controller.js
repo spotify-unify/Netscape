@@ -14,7 +14,7 @@ var MainCtrl = ["$scope", "$state", function($scope, $state) {
 
   $scope.buttonClicked = function() {
     console.log($scope.details);
-    console.log($scope.date)
+    console.log($scope.date);
     console.log("hello");
     //$scope.visible = false;
     // if scope > 0
