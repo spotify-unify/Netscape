@@ -16,6 +16,7 @@ var MainCtrl = ["$scope", "$state", function($scope, $state) {
     console.log($scope.details);
     console.log($scope.date);
     console.log("hello");
+    console.log($scope.timedwm);
     //$scope.visible = false;
     // if scope > 0
     $state.go('second-page', {date: $scope.date, details: $scope.details});
