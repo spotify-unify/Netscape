@@ -126,48 +126,85 @@ form-group:nth-child(0){
 	margin-right:10px;
 }
 
-.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
-	width:100%;
-}
-
 .bootstrap-select.btn-group:not(.input-group-btn){
 	float:left;
-	
 }
-
 
 .selectpicker{
 	float:left;
 	
 }
 
-/*selectpicker dropdown*/
-#user-input > div:nth-child(4) > div > button{
-	font-size:18px;
-	color: #555;
-}
-
-#submit{
+#submit-input{
 	float:left;
 	margin-top:36px;
 	height: 45px;
-    padding: 2px 40px 0px 40px;
+	padding: 12px 20px 0px 20px;
 	background-color: #009DE0;
 	border-color: #009DE0;
-	font-family: 'Raleway', sans-serif;
-	font-size:	large;
-
-}
-
-/* Second Page */
-
-#playlist {
-	width:200px;
 }
 
 
+/*start here*/
 
+#second-page{
+	width: 100%; 
+	height: 100%;
+	position: absolute; top: 0; left: 0;
+	background-color: #c3c3c3;
+}
+
+.concertlist {
+	display: inline;
+}
+
+#concertimage {
+	height: 102px;
+	display: inline-block;
+	background-color: white;
+	vertical-align: top;
+
+}
+#concertdate {
+	height: 102px;
+	margin-left: 10px;
+	display: inline-block;
+	background-color: white;
+	vertical-align: top;
+	text-align: center;
+
+}
+#concertdate p {
+}
+
+#concertdetail {
+	height: 102px;
+	width: 500px;
+	display: inline-block;
+	margin-left: 10px;
+	padding-left: 10px;
+	background-color: white;
+}
+
+#concertartist
+{
+	height: 50px;
+	clear: right;
+	background-color: white;
+	vertical-align: top;
+}
+
+#concertplace {
+	height: 50px;
+	vertical-align: top;
+	background-color: white;
+}
+
+#concertlistimage {
+	width: 126px;
+	height: 102px;
+}
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
-   all your sass files automatically */
+all your sass files automatically */
 // injector
 // endinjector

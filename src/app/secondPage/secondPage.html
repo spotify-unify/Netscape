@@ -1,28 +1,42 @@
-<div id="second-page" >
-		<div class="container" >
-			<div class="row logo">
-				<img id="logo" src="./assets/images/venew.png">
-			</div>
-      <ul>
-        <li ng-repeat="concert in concerts">
-          <h2>{{concert.artists.headliner}}</h2>
-          <p>{{concert.venue.name}}</p>
-          <p>{{concert.venue.location.city}}</p>
-          <p>{{concert.startDate}}</p>
-          <img src="{{concert.image[3]['#text']}}">
-        </li>
-      </ul>
-		</div>
-		<div id="timeline-chart">
-          <rickshaw
-            rickshaw-options="options"
-            rickshaw-features="features"
-            rickshaw-series="series">
-          </rickshaw>
-		</div>
-		<div id="spotify-playlist">
-			<!--<a ng-click="toggleImage()"><img id="followbutton" ng-src="{{followBtnImgUrl}}"  /></a>-->
-			<img id="playlist" ng-src="./assets/images/spotify-playlist.png" ng-click="alert();">
-		</div>
-	</div>
 
+<div id="second-page" >
+	<div class="container" >
+		<div class="row logo">
+			<img id="logo" src="./assets/images/venew.png">
+		</div>
+
+
+		<ul class="list-inline">
+			<li ng-repeat="concert in concerts">
+				<div id="concertimage">
+					<img id="concertlistimage" src="{{concert.image[3]['#text']}}"></div>
+					<div id="concertdate">
+						<p class="concertlist" style="display:table-cell;vertical-align:middle;height:102px;">{{concert.startDate}}</p>
+					</div>
+
+
+					<div id="concertdetail">
+						<div id="concertartist">
+							<h2 class="concertlist" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">{{concert.artists.headliner}}</h2></div>
+							<div id="concertplace" style="display:table-cell;vertical-align:bottom;width:500px;height:50px;">
+								<p class="concertlist">{{concert.venue.name}}</p>
+								<p class="concertlist">{{concert.venue.location.city}}</p>
+							</div>
+							</div>
+
+						</li>
+					</ul>
+
+				</div>
+				<div id="timeline-chart">
+				</div>
+			</div>
+
+
+
+
+			{{date}}
+			{{city}}
+			{{locationLat}}
+			{{locationLong}}
+			{{duration}}
