@@ -24,6 +24,27 @@ class SecondPageCtrl {
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
 
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December"
+
+            function addZero(i) {
+              if (i < 10) {
+                i = "0" + i;
+              }
+              return i;
+            }
+
             var tmp = data.events.event,
                 i, concertDate;
 
@@ -32,21 +53,21 @@ class SecondPageCtrl {
               concertDate = new Date(tmp[i].startDate);
 
               if(concertDate >= holidayDate && concertDate <= endDate) {
+                tmp[i].day = concertDate.getDate();
+                tmp[i].month = month[concertDate.getMonth()];
+                tmp[i].timeHours = addZero(concertDate.getHours());
+                tmp[i].timeMinutes = addZero(concertDate.getMinutes());
                 $scope.concerts.push(tmp[i]);
 
               }
-
-
             }
-
-
           });
 
         var playlist_songs = [];
 
         // undefined? concerts?
         console.log($scope.concerts);
-        $scope.concerts.artists.headliner.forEach( function (artist) {
+        /*$scope.concerts.artists.headliner.forEach( function (artist) {
             $Spotify.search(artist, 'artist').then(function (data) {
                 //var artist_id = data["artists"]["items"][0]["id"];
                 var artist_id = data.artists.items[0].id;
@@ -59,10 +80,9 @@ class SecondPageCtrl {
                     });
                 }); 
             });
-        });
+        });*/
 
         console.log(playlist_songs);
-        
     }
 }
 
