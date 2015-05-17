@@ -12,12 +12,12 @@ angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'n
   .controller('MainCtrl', MainCtrl)
   .controller('SecondPageCtrl', SecondPageCtrl)
   .config(function (SpotifyProvider) {
-  SpotifyProvider.setClientId('70a0a5a24d3d48c4869c40e118968036');
-  SpotifyProvider.setRedirectUri('<CALLBACK_URI>');
-  SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
-  // If you already have an auth token
-  SpotifyProvider.setAuthToken('zoasliu1248sdfuiknuha7882iu4rnuwehifskmkiuwhjg23');
-})
+    SpotifyProvider.setClientId('70a0a5a24d3d48c4869c40e118968036');
+    SpotifyProvider.setRedirectUri('http://www.spotify.com/se/');
+    SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
+    // If you already have an auth token
+    SpotifyProvider.setAuthToken('zoasliu1248sdfuiknuha7882iu4rnuwehifskmkiuwhjg23');
+  })
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

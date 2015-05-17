@@ -1,13 +1,17 @@
 'use strict';
 
 class SecondPageCtrl {
-    constructor ($scope, $state, $stateParams) {
+    constructor ($scope, $state, $stateParams, $d3, $Spotify) {
         console.log("From first page: ", $stateParams);
         $scope.date = $stateParams.date;
         $scope.details = $stateParams.details;
 
         d3.select("#timeline-chart")
             .data([]);
+
+        $Spotify.search('Nirvana', 'Artist').then(function (data) {
+            console.log(data);
+        });
     }
 
     filterConcert(concertArray){
@@ -212,6 +216,6 @@ class SecondPageCtrl {
     }
 }
 
-SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3'];
+SecondPageCtrl.$inject = ['$scope', '$state', '$stateParams', 'd3', 'Spotify'];
 
 export default SecondPageCtrl;
