@@ -24,7 +24,8 @@ var LastFMService = ["$http", function($http) {
             'api_key': api_key,
             'method': 'geo.getEvents',
             'format': format,
-            'location': location
+            'location': location,
+            'limit': 100
           }
         }).then(function (response) {
           return response.data;

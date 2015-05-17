@@ -19,7 +19,7 @@ angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'n
         controller: 'MainCtrl'
       })
       .state('second-page', {
-        url: '/second-page?date',
+        url: '/second-page?date&location&duration&dwm',
         templateUrl: 'app/secondPage/secondPage.html',
         controller: 'SecondPageCtrl'
       });
