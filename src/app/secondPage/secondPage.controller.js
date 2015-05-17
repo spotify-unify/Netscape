@@ -64,11 +64,24 @@ class SecondPageCtrl {
             }
 
             $scope.backupConcerts = $scope.concerts;
+
           });
 
-        function updateConcerts(startDate,finishDate) {
+      var updateConcerts = function(startDate,finishDate) {
 
-        }
+          var i,concertDate;
+
+          $scope.concerts = [];
+
+          for(i=0;i<$scope.backupConcerts.length;i++) {
+
+            concertDate = new Date($scope.backupConcerts[i].startDate);
+
+            if(concertDate >= startDate && concertDate <= finishDate) {
+              $scope.concerts.push($scope.backupConcerts[i]);
+            }
+          }
+      }
 
         $Spotify.search('Nirvana', 'artist').then(function (data) {
             //var artist_id = data["artists"]["items"][0]["id"];
