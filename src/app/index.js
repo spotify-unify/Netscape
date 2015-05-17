@@ -13,7 +13,7 @@ angular.module('methuselah', ['spotify', 'ngAnimate', 'ngCookies', 'ngTouch', 'n
   .controller('SecondPageCtrl', SecondPageCtrl)
   .config(function (SpotifyProvider) {
     SpotifyProvider.setClientId('70a0a5a24d3d48c4869c40e118968036');
-    SpotifyProvider.setRedirectUri('localhost:3032');
+    SpotifyProvider.setRedirectUri('http://localhost:3000');
     SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     // If you already have an auth token
     SpotifyProvider.setAuthToken('85afc505f1394ef4a38f2a427002e705');

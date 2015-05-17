@@ -23,7 +23,18 @@ label{
 	color: white;
 }
 
+#info-text{
+	text-align: center;
 
+}
+
+#info-text > h2{
+	padding-left:15px;
+	color: white;
+	
+
+
+}
 
 #user-input > div> label{
 	font-size:22px;
@@ -44,10 +55,11 @@ label{
 	width:300px;
 	margin-left:-10px;
 	margin-top:23px;
+	margin-bottom:80px;
 }
 
 #user-input{
-	margin-top:100px;
+	margin-top:40px;
 }
 
 input[type="text"] {
