@@ -57,12 +57,12 @@ class SecondPageCtrl {
                 tmp[i].timeHours = addZero(concertDate.getHours());
                 tmp[i].timeMinutes = addZero(concertDate.getMinutes());
                 $scope.concerts.push(tmp[i]);
-
               }
             }
 
             $scope.backupConcerts = $scope.concerts;
 
+            getSongs();
           });
 
       var updateConcerts = function(startDate,finishDate) {
@@ -81,15 +81,24 @@ class SecondPageCtrl {
           }
       }
 
-        var playlist_songs = [];
+        function testsongs(){
+            console.log($scope.backupConcerts);
+            console.log($scope.artists.headliner);
+        }
 
+
+        var playlist_songs = [];
         // undefined? concerts?
-        console.log($scope.backupConcerts);
-        /*$scope.concerts.artists.headliner.forEach( function (artist) {
+
+        function getSongs() {
+        console.log($scope.concerts);
+        $scope.concerts
+        for(var i = 0; i < $scope.concerts.length; i++){
+            var artist = $scope.concerts[i].artists.headliner;
+            console.log(artist);
             $Spotify.search(artist, 'artist').then(function (data) {
                 //var artist_id = data["artists"]["items"][0]["id"];
                 var artist_id = data.artists.items[0].id;
->>>>>>> 46eaf3f08c63918af8aa546664a3dbef998b5ede
 
                 var top_tracks = $Spotify.getArtistTopTracks(artist_id, 'SE').then(function (data) {
                     var top_five_tracks = data.tracks.slice(0,5);
@@ -99,13 +108,11 @@ class SecondPageCtrl {
                     });
                 });
             });
-        });*/
+        }
+        }
 
         console.log(playlist_songs);
 
-        function updateConcerts(startDate,finishDate) {
-
-        }
     }
 }
 
