@@ -10,7 +10,7 @@ var MainCtrl = ["$scope", "$state", function($scope, $state) {
 
 	var bgIdx = Math.floor(bgs.length * Math.random());
 
-	$('#first-page').css('background-image', 'url(' + bgPath + bgs[bgIdx] +')');
+  $('#first-page').css('background-image', 'url(' + bgPath + bgs[bgIdx] +')');
 
   $scope.destination = city;
   $scope.details = details;

@@ -37,7 +37,7 @@ label{
 	font-size:22px;
 }
 #first-page{
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	position: absolute; top: 0; left: 0;
 	//background: url("../assets/images/background01.jpg") no-repeat center center fixed;
@@ -81,7 +81,7 @@ input[type="number"] {
 input[type="date"] {
 	width:100%;
 	height: 45px;
-	
+
 }
 
 .form-group{
@@ -92,7 +92,7 @@ input[type="date"] {
 
 form-group:nth-child(0){
 	margin-right:20px;
-	
+
 }
 #user-input > div:nth-child(1){
 	width:30%;
@@ -120,9 +120,9 @@ div.btn-group.bootstrap-select {
 	font-family: 'Raleway', sans-serif;
 	color:rgb(85,85,85);
 	font-size: large;
-	
 
-	
+
+
 
 }
 #user-input > div:nth-child(4){
@@ -142,7 +142,7 @@ div.btn-group.bootstrap-select {
 
 .selectpicker{
 	float:left;
-	
+
 }
 
 #submit{
@@ -208,9 +208,18 @@ div.btn-group.bootstrap-select {
 
 /*second page start here*/
 
+rect {
+  fill: #009DE0;
+}
+
+body
+
 #second-page{
-	width: 100%; 
+
+	width: 100%;
 	background-color: #c3c3c3;
+	width: 100%;
+	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -228,7 +237,7 @@ ul {
 	background-color: white;
 }
 .list-inline {
-	margin-top: 5%; 
+	margin-top: 5%;
 	margin-bottom: 5%;
 	width: 100%;
 	background-color: white;

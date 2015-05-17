@@ -3,6 +3,7 @@
 class SecondPageCtrl {
     constructor ($scope, $state, $stateParams, d3, LastFMService, $Spotify) {
 
+
         var holidayDate = new Date($stateParams.date),
             holidayLocation = $stateParams.location,
             holidayDuration = $stateParams.duration,
@@ -158,7 +159,17 @@ class SecondPageCtrl {
 
         function getSongs() {
 
-            $Spotify.login();
+        $Spotify.login().then(function (data) {
+
+          $Spotify.getCurrentUser().then(function (user_id) {
+            console.log("User id: ", user_id);
+            $Spotify.createPlaylist(user_id.id, { name: 'Unify - Venew' }).then(function (playlist) {
+              console.log("Playlist id: ", playlist);
+              console.log(playlist_songs);
+              $Spotify.addPlaylistTracks(user_id.id, playlist.id, playlist_songs.slice(0,50));
+            });
+          });
+        });
 
             console.log($scope.concerts);
             $scope.concerts
