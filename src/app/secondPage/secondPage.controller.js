@@ -11,15 +11,15 @@ class SecondPageCtrl {
 
         $scope.concerts = [];
 
-        if(dwm == "Days") {
+        if(dwm === "days") {
           endDate.setDate(endDate.getDate() + holidayDuration);
         } else
-        if(dwm == "Weeks")
+        if(dwm === "weeks")
           endDate.setDate(endDate.getDate() + holidayDuration*7);
-        else
+        else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
 
-        console.log(holidayLocation);
+
 
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
