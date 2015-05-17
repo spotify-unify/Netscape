@@ -18,6 +18,7 @@ class SecondPageCtrl {
 
         $scope.generatePlaylist = function() {
           getSongs();
+          
         }
 
         function grapher(){
@@ -130,10 +131,7 @@ class SecondPageCtrl {
 
                 $scope.backupConcerts = $scope.concerts;
                 grapher();
-<<<<<<< HEAD
 
-=======
->>>>>>> f543a4a5dbbc597690e611579e513c353ba92e6f
             });
 
         var updateConcerts = function(startDate,finishDate) {
