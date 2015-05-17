@@ -10,21 +10,15 @@ var MainCtrl = ["$scope", "$state", function($scope, $state) {
 
 	$('#first-page').css('background-image', 'url(' + bgPath + bgs[bgIdx] +');');
 
-  $('.dropdown-menu li').on('click', function () {
-    console.log("heyy");
-  });
-
-    $scope.details = "";
+  $scope.details = "";
 
   $scope.buttonClicked = function() {
-    console.log($scope.details);
-    console.log($scope.duration);
-    console.log($scope.timedwm);
-    $state.go('second-page', {date: $scope.date, details: $scope.details,
-      location: $scope.details.address_components[0].long_name});
-
+    $state.go('second-page', {date: $scope.date, location: $scope.details.address_components[0].long_name,
+      duration: $scope.duration, dwm: $scope.timedwm});
   }
+
   $('.selectpicker').selectpicker();
+
 }];
 
 
