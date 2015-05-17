@@ -19,8 +19,29 @@ class SecondPageCtrl {
         else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
 
-
-
+        function filterConcerts(concerts){
+            var _ = window._
+            var groups = _.groupBy(concerts, function(concert){
+                return new Date((new Date(concert.startDate)).toDateString());
+            });
+            var newGroups = []
+            for(var date in groups){
+                console.log((new Date(date)).getDate())
+                newGroups.push({
+                    x: (new Date(date)).getTime(),
+                    y: groups[date].length
+                });
+            }
+            return newGroups
+        }
+        $scope.series = [{
+            name:"Series",
+            data:[]
+        }]
+        $scope.options = {
+            renderer: 'bar'
+        };
+        
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
 
@@ -61,6 +82,10 @@ class SecondPageCtrl {
 
               }
             }
+                  $scope.series = [{
+                  name: "Series",
+                  data: filterConcerts($scope.concerts)
+              }]
           });
 
         $Spotify.search('Nirvana', 'artist').then(function (data) {
