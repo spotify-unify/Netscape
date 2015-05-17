@@ -3,6 +3,15 @@
 class SecondPageCtrl {
     constructor ($scope, $state, $stateParams, d3, LastFMService, $Spotify) {
 
+        var bgPath = "./assets/images/";
+        var bgs = ["background01.jpg", "background02.jpg",  "background04.jpg",
+     "background06.jpg", "background07.jpg"];
+
+    var bgIdx = Math.floor(bgs.length * Math.random());
+
+    $('#second-page').css('background-image', 'url(' + bgPath + bgs[bgIdx] +')');
+
+
         var holidayDate = new Date($stateParams.date),
             holidayLocation = $stateParams.location,
             holidayDuration = $stateParams.duration,
