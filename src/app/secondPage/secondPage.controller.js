@@ -9,6 +9,7 @@ class SecondPageCtrl {
             dwm = $stateParams.dwm,
             endDate = new Date($stateParams.date);
 
+        $scope.backupConcerts = [];
         $scope.concerts = [];
 
         if(dwm === "days") {
@@ -18,8 +19,6 @@ class SecondPageCtrl {
           endDate.setDate(endDate.getDate() + holidayDuration*7);
         else if(dwm === "months")
           endDate.setDate(endDate.getDate() + holidayDuration*30);
-
-
 
         LastFMService.getEvents(holidayLocation)
           .then(function(data) {
@@ -61,12 +60,14 @@ class SecondPageCtrl {
 
               }
             }
+
+            $scope.backupConcerts = $scope.concerts;
           });
 
         var playlist_songs = [];
 
         // undefined? concerts?
-        console.log($scope.concerts);
+        console.log($scope.backupConcerts);
         /*$scope.concerts.artists.headliner.forEach( function (artist) {
             $Spotify.search(artist, 'artist').then(function (data) {
                 //var artist_id = data["artists"]["items"][0]["id"];
@@ -83,6 +84,10 @@ class SecondPageCtrl {
         });*/
 
         console.log(playlist_songs);
+
+        function updateConcerts(startDate,finishDate) {
+
+        }
     }
 }
 
