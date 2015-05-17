@@ -32,6 +32,7 @@ class SecondPageCtrl {
             });
             $scope.slider.onSlide(function(_, xMin, xMax){
                 console.log(xMin, xMax)
+                if(!xMin || !xMax) {return}
                 updateConcerts(new Date(xMin), new Date(xMax));
                 $scope.$apply();
             });
