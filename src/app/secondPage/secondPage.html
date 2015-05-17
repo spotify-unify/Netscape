@@ -1,6 +1,9 @@
 
 <div id="second-page" >
 	<div class="container" >
+	<!--<div id="spotify-playlist">
+			<img ng-src="./assets/images/spotify-playlist.png" ng-click="generatePlaylist()">
+		</div>-->
 		<div class="row logo">
 			<img id="logo" src="./assets/images/venew.png">
 		</div>
@@ -15,7 +18,9 @@
 				<div id="concertimage">
 					<img id="concertlistimage" src="{{concert.image[3]['#text']}}"></div>
 					<div id="concertdate">
-						<p class="concertlist" style="display:table-cell;vertical-align:middle;height:102px;">{{concert.startDate}}</p>
+						<p class="concertlist" style="display:table-cell;vertical-align:middle;height:102px;">{{concert.day}}</p>
+            <p class="concertlist" style="display:table-cell;vertical-align:middle;height:102px;">{{concert.month}}</p>
+            <p class="concertlist" style="display:table-cell;vertical-align:middle;height:102px;">{{concert.timeHours}}:{{concert.timeMinutes}}</p>
 					</div>
 
 
@@ -34,6 +39,8 @@
 				</div>
 				<div id="timeline-chart">
 				</div>
+
+				
 			</div>
 
 
